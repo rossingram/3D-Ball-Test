@@ -337,9 +337,9 @@ AEROTWIST.ReactiveBall = (function() {
 
     // now bind them on
     window.addEventListener('resize', callbacks.onResize, false);
-    window.addEventListener('mousedown', callbacks.onMouseDown, false);
-    window.addEventListener('mousemove', callbacks.onMouseMove, false);
-    window.addEventListener('mouseup', callbacks.onMouseUp, false);
+    window.addEventListener('mousedown', callbacks.touchstart, false);
+    window.addEventListener('mousemove', callbacks.touchmove, false);
+    window.addEventListener('mouseup', callbacks.touchend, false);
 
     renderer.domElement.addEventListener('selectstart', callbacks.onSelectStart, false);
   }
