@@ -294,7 +294,7 @@ AEROTWIST.ReactiveBall = (function() {
        *
        * @param {Event} evt The mouse event
        */
-      onMouseDown: function(evt) {
+      touchstart: function(evt) {
         mousePressed = true;
 
         checkIntersection(evt);
@@ -308,7 +308,7 @@ AEROTWIST.ReactiveBall = (function() {
        *
        * @param {Event} evt The mouse event
        */
-      onMouseMove: function(evt) {
+      touchmove: function(evt) {
         if(mousePressed) {
           checkIntersection(evt);
         }
@@ -319,7 +319,7 @@ AEROTWIST.ReactiveBall = (function() {
        *
        * @param {Event} evt The mouse event
        */
-      onMouseUp: function() {
+      touchend: function() {
         mousePressed = false;
 
         // reset the timer for the automatic wibble
